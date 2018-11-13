@@ -1,10 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Expedition.Web.DAL.Abstractions;
+﻿using Expedition.Web.DAL.Abstractions;
 using Expedition.Web.DAL.Abstractions.DbContext;
 using Expedition.Web.DAL.Abstractions.Repositories;
-using Expedition.Web.DAL.DbContext;
+using Expedition.Web.DAL.Repositories.Base;
 
 namespace Expedition.Web.DAL.Repositories
 {
@@ -12,18 +9,6 @@ namespace Expedition.Web.DAL.Repositories
     {
         public CityRepository(IDbAccess dbAccess) : base(dbAccess)
         {
-        }
-
-        public async Task<IEnumerable<City>> GetAll()
-        {
-            IEnumerable<City> result = Enumerable.Empty<City>();
-            await DbAccess.ProcessRequest(context =>
-            {
-                result = ((ExpeditionDbContex) context).Cities;
-                return Task.CompletedTask;
-            });
-
-            return result;
         }
     }
 }

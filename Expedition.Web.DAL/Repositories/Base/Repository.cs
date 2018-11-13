@@ -1,10 +1,11 @@
 ﻿using System.Threading.Tasks;
+using Expedition.Web.DAL.Abstractions;
 using Expedition.Web.DAL.Abstractions.DbContext;
 using Expedition.Web.DAL.Abstractions.Repositories.Base;
 
-namespace Expedition.Web.DAL.Repositories
+namespace Expedition.Web.DAL.Repositories.Base
 {
-    public class Repository<TEntity> : ReadOnlyRepository<TEntity>, IRepository<TEntity> where TEntity : class, new()
+    public class Repository<TEntity> : ReadOnlyRepository<TEntity>, IRepository<TEntity> where TEntity : Entity, new()
     {
         public Repository(IDbAccess dbAccess) : base(dbAccess)
         {
