@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
-namespace Expedition.Web.DAL.DbContext.Entities
+namespace Expedition.Web.DAL.Abstractions.Entities
 {
     public class Partners
     {

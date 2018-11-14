@@ -44,6 +44,7 @@ namespace Expedition.Web
             services.AddScoped<IDbContextCommiter, DbContextCommiter>();
             services.AddScoped<IDbAccess, DbAccess>();
             services.AddTransient<ICityRepository, CityRepository>();
+            services.AddTransient<ICountryRepository, CountryRepository>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

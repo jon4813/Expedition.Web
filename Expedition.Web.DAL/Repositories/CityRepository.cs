@@ -1,5 +1,6 @@
 ﻿using Expedition.Web.DAL.Abstractions;
 using Expedition.Web.DAL.Abstractions.DbContext;
+using Expedition.Web.DAL.Abstractions.Entities;
 using Expedition.Web.DAL.Abstractions.Repositories;
 using Expedition.Web.DAL.Repositories.Base;
 
